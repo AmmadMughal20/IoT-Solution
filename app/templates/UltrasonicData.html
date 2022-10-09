@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container" >
+    <div class="row" class="left_row">
+      <div class="col-6">
+        <h3>Ultrasonic Sensor</h3>
+      </div>
+      <div class="col-6">
+        <img src='https://www.majju.pk/assets/uploads/2019/03/HC-SR04-Ultrasonic-Sensor-Module.jpg'/>
+      </div>
+    </div>
+</div> 
+
+<div class="container table-responsive py-5"> 
+  <table class="table table-bordered table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Sr.</th>
+        <th scope="col">Distance</th>
+        <th scope="col">Time Stamp</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in ultrasonic_data %}
+      <tr>
+        <td>{{ loop.index }}</td>
+        <td>{{ row[0] }}</td>
+        <td>{{ row[1] }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  </div>>
+
+{% endblock %}

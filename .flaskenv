@@ -1,0 +1,4 @@
+FLASK_DEBUG=1
+FLASK_APP=sensordata.py
+DB_USERNAME="postgres"
+DB_PASSWORD="admin123"
